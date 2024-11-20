@@ -1,3 +1,4 @@
+
 namespace AsoBotController {
 
     //% block="コントローラ初期化"
@@ -11,7 +12,7 @@ namespace AsoBotController {
     }
 
     //% block="P13入力"
-    input.onButtonPressed(Button.A, function () {
-        serial.writeLine("" + (pins.digitalReadPin(DigitalPin.P13)))
-    })
+    input.onButtonPressed(Button.B, () => {
+        pins.digitalWritePin(DigitalPin.P13, 1);
+    });
 }

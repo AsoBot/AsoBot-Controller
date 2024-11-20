@@ -1,4 +1,3 @@
-//% color=#1299AF weight=100 icon="\f544" block="AsoBot-Controller"
 namespace AsoBotController {
 
     //% block="コントローラ初期化"
@@ -11,8 +10,8 @@ namespace AsoBotController {
         pins.setPull(DigitalPin.P16, PinPullMode.PullNone)
     }
 
-    //% block="P13判定"
-    export function p13input() {
-        return pins.digitalReadPin(DigitalPin.P13)
-    }
+    //% block="P13入力"
+    input.onButtonPressed(Button.A, function () {
+        serial.writeLine("" + (pins.digitalReadPin(DigitalPin.P13)))
+    })
 }

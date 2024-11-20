@@ -12,7 +12,7 @@ namespace AsoBotController {
     }
 
     //% block="P13判定"
-    input.onButtonPressed(Button.A, function () {
+    export function p13input() {
         return pins.digitalReadPin(DigitalPin.P13)
-    })
+    }
 }

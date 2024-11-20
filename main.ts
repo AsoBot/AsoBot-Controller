@@ -12,7 +12,5 @@ namespace AsoBotController {
     }
 
     //% block="P13入力"
-    input.onButtonPressed(Button.B, () => {
-        pins.digitalWritePin(DigitalPin.P13, 1);
-    });
+    pins.digitalReadPin(DigitalPin.P13)
 }

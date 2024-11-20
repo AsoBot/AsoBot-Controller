@@ -1,10 +1,5 @@
 //% color=#1299AF weight=100 icon="\f544" block="AsoBot-Controller"
 namespace AsoBotController {
-    function lcdWriteRegister(reg: number, val: number) {
-        let lcdAddr = 0x3e
-        let cmd = (reg << 8) | val
-        pins.i2cWriteNumber(lcdAddr, cmd, NumberFormat.UInt16BE)
-    }
 
     //% block="コントローラ初期化"
     export function lcdInit() {

@@ -10,4 +10,9 @@ namespace AsoBotController {
         pins.setPull(DigitalPin.P15, PinPullMode.PullNone)
         pins.setPull(DigitalPin.P16, PinPullMode.PullNone)
     }
+
+    //% block="P13判定"
+    input.onButtonPressed(Button.A, function () {
+        return pins.digitalReadPin(DigitalPin.P13)
+    })
 }
